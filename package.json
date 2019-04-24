@@ -4,7 +4,7 @@
   "description": "api for face recognition web-app",
   "main": "index.js",
   "scripts": {
-    "start": "server.js"
+    "start": "nodemon server.js"
   },
   "author": "Victor Balcazar",
   "license": "ISC",
@@ -15,7 +15,9 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "knex": "^0.16.5",
-    "nodemon": "^1.18.11",
     "pg": "^7.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
   }
 }
