@@ -8,10 +8,7 @@ const handleRegister = (req, res, db, bcrypt) => {
     console.log(email);
     console.log(name);
     console.log(password);
-    
-    // bcrypt.hash(password, null, null, (err, hash) => {
-    //     console.log(hash);
-    // });
+
         db.transaction(trx => {
             trx.insert({
                 hash: hash,
@@ -35,7 +32,7 @@ const handleRegister = (req, res, db, bcrypt) => {
             .catch(trx.rollback)
         })
         
-        .catch(err => res.status(400).json('unable to register'))
+        .catch(err => res.status(400).json(err + 'unable to register'))
 
     
 }
